@@ -319,11 +319,13 @@ class Room{
             else if(option == 3) next = three;
         }
         //check to see if there needs to be anything added to inventory
-        if(option == 1 && add){
-            for(int i = 0; i < 5; i++){
-                if(inv[i] == "*"){
-                    inv[i] = inventory;
-                    break;
+        if(add){
+            if(option == 1 || inventory == "Bomb"){
+                for(int i = 0; i < 5; i++){
+                    if(inv[i] == "*"){
+                        inv[i] = inventory;
+                        break;
+                    }
                 }
             }
         }
